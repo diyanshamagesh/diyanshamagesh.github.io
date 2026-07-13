@@ -1,0 +1,504 @@
+/* =============================================
+   DIYANSHA MAGESH — Custom Portfolio Theme
+   2026 | Psychology Research Portfolio
+   
+   Palette:
+   - Midnight: #0D1117 (deep navy-black)
+   - Slate: #1C2333 (card backgrounds)
+   - Indigo: #4F46E5 (primary accent)
+   - Violet: #7C3AED (secondary accent)
+   - Lavender: #C4B5FD (soft highlight)
+   - Blush: #F0ABFC (warm pop)
+   - Off-white: #F8F7FF (body text on dark)
+   - Muted: #94A3B8 (secondary text)
+
+   Fonts:
+   - Display: 'Plus Jakarta Sans' (headings)
+   - Body: 'Inter' (readable, modern)
+============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── GLOBAL RESET & BASE ─────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --midnight: #0D1117;
+  --slate: #1C2333;
+  --slate-light: #242f44;
+  --indigo: #4F46E5;
+  --violet: #7C3AED;
+  --lavender: #C4B5FD;
+  --blush: #F0ABFC;
+  --off-white: #F8F7FF;
+  --muted: #94A3B8;
+  --border: rgba(255,255,255,0.08);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.35);
+  --glow: 0 0 40px rgba(79,70,229,0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--midnight) !important;
+  color: var(--off-white) !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TYPOGRAPHY ──────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700 !important;
+  color: var(--off-white) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3rem) !important; }
+h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem) !important; margin-top: 2.5rem !important; }
+h3 { font-size: 1.2rem !important; color: var(--lavender) !important; }
+
+p {
+  color: #CBD5E1 !important;
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: var(--lavender) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--blush) !important;
+  opacity: 1 !important;
+}
+
+strong {
+  color: var(--off-white) !important;
+  font-weight: 600;
+}
+
+hr {
+  border: none !important;
+  border-top: 1px solid var(--border) !important;
+  margin: 2.5rem 0 !important;
+}
+
+/* ── MASTHEAD / NAV ───────────────────────── */
+.masthead {
+  background: rgba(13, 17, 23, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--border) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  box-shadow: none !important;
+}
+
+.masthead__inner-wrap {
+  padding: 0.8rem 2rem !important;
+}
+
+.site-title,
+.masthead__menu a.site-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+  color: var(--off-white) !important;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--lavender), var(--blush));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.greedy-nav a {
+  color: var(--muted) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em;
+  transition: color 0.2s !important;
+}
+
+.greedy-nav a:hover,
+.greedy-nav .visible-links a:hover {
+  color: var(--off-white) !important;
+  background: transparent !important;
+}
+
+.greedy-nav .visible-links a::before {
+  background: var(--indigo) !important;
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+/* ── SIDEBAR ─────────────────────────────── */
+.sidebar {
+  background: var(--slate) !important;
+  border-right: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  padding: 2rem 1.5rem !important;
+}
+
+.author__avatar img {
+  border-radius: 50% !important;
+  border: 3px solid transparent !important;
+  background: linear-gradient(135deg, var(--indigo), var(--violet)) border-box !important;
+  box-shadow: 0 0 0 3px var(--slate), 0 0 0 5px var(--indigo), var(--shadow) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.author__avatar img:hover {
+  transform: scale(1.04) !important;
+  box-shadow: 0 0 0 3px var(--slate), 0 0 0 5px var(--violet), 0 0 30px rgba(124,58,237,0.3) !important;
+}
+
+.author__name {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  color: var(--off-white) !important;
+  letter-spacing: -0.02em;
+  margin-top: 1rem !important;
+}
+
+.author__bio {
+  color: var(--muted) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.5 !important;
+  margin-top: 0.4rem !important;
+}
+
+.author__urls-wrapper button {
+  display: none !important;
+}
+
+.author__urls {
+  display: block !important;
+  margin-top: 1.2rem !important;
+}
+
+.author__urls li {
+  margin-bottom: 0.5rem !important;
+}
+
+.author__urls a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  color: var(--muted) !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  padding: 0.35rem 0.6rem !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.author__urls a:hover {
+  background: rgba(79, 70, 229, 0.12) !important;
+  color: var(--lavender) !important;
+}
+
+/* Author location / employer info */
+.author__content .author__urls-wrapper .author__location,
+.author__content p {
+  color: var(--muted) !important;
+  font-size: 0.82rem !important;
+}
+
+/* ── MAIN CONTENT AREA ───────────────────── */
+#main {
+  background: var(--midnight) !important;
+}
+
+.page__content {
+  color: #CBD5E1 !important;
+}
+
+.page__title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  color: var(--off-white) !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.1 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Hero gradient accent on about page name */
+.page__hero,
+.page__hero--overlay {
+  background: linear-gradient(135deg, var(--midnight) 0%, var(--slate) 100%) !important;
+}
+
+/* ── ARCHIVE / PORTFOLIO GRID ────────────── */
+.entries-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 1.5rem !important;
+}
+
+.archive__item {
+  background: var(--slate) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 1.5rem !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.archive__item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--indigo), var(--violet), var(--blush));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 40px rgba(79, 70, 229, 0.2) !important;
+  border-color: rgba(79, 70, 229, 0.3) !important;
+}
+
+.archive__item:hover::before {
+  opacity: 1;
+}
+
+.archive__item-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  color: var(--off-white) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.archive__item-title a {
+  color: var(--off-white) !important;
+}
+
+.archive__item-title a:hover {
+  color: var(--lavender) !important;
+}
+
+.archive__item-excerpt {
+  color: var(--muted) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+}
+
+/* ── BUTTONS ─────────────────────────────── */
+.btn {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1.4rem !important;
+  transition: all 0.2s ease !important;
+  letter-spacing: 0.01em;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--indigo), var(--violet)) !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.35) !important;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5) !important;
+  color: #fff !important;
+}
+
+/* ── TABLES ──────────────────────────────── */
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.875rem !important;
+}
+
+thead tr {
+  background: var(--slate) !important;
+  border-bottom: 2px solid var(--indigo) !important;
+}
+
+thead th {
+  color: var(--lavender) !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1rem !important;
+  text-align: left !important;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border) !important;
+  transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+  background: rgba(79, 70, 229, 0.05) !important;
+}
+
+tbody td {
+  padding: 0.75rem 1rem !important;
+  color: #CBD5E1 !important;
+  vertical-align: top;
+}
+
+/* ── CODE BLOCKS ─────────────────────────── */
+pre, code {
+  background: var(--slate) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  color: var(--lavender) !important;
+  font-size: 0.85rem !important;
+}
+
+/* ── BLOCKQUOTES ─────────────────────────── */
+blockquote {
+  border-left: 3px solid var(--indigo) !important;
+  background: var(--slate) !important;
+  border-radius: 0 8px 8px 0 !important;
+  padding: 1rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  color: var(--muted) !important;
+  font-style: italic !important;
+}
+
+/* ── PAGE INNER LAYOUT ───────────────────── */
+.page__inner-wrap {
+  background: var(--midnight) !important;
+}
+
+.page {
+  padding: 2rem !important;
+}
+
+/* Section dividers as glowing accents */
+.page__content h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem !important;
+}
+
+.page__content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 40px; height: 2px;
+  background: linear-gradient(90deg, var(--indigo), var(--violet));
+  border-radius: 2px;
+}
+
+/* ── FOOTER ──────────────────────────────── */
+.page__footer {
+  background: var(--slate) !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--muted) !important;
+  font-size: 0.8rem !important;
+}
+
+.page__footer a {
+  color: var(--muted) !important;
+}
+
+.page__footer a:hover {
+  color: var(--lavender) !important;
+}
+
+/* ── SCROLLBAR ───────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--midnight);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--slate-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--indigo);
+}
+
+/* ── SELECTION ───────────────────────────── */
+::selection {
+  background: rgba(79, 70, 229, 0.35);
+  color: var(--off-white);
+}
+
+/* ── TAGS / BADGES ───────────────────────── */
+.page__taxonomy-item a {
+  background: rgba(79, 70, 229, 0.15) !important;
+  border: 1px solid rgba(79, 70, 229, 0.3) !important;
+  color: var(--lavender) !important;
+  border-radius: 6px !important;
+  padding: 0.2rem 0.6rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s !important;
+}
+
+.page__taxonomy-item a:hover {
+  background: rgba(79, 70, 229, 0.3) !important;
+}
+
+/* ── RESPONSIVE ──────────────────────────── */
+@media (max-width: 768px) {
+  .sidebar {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 1.5rem !important;
+  }
+
+  .page {
+    padding: 1.2rem !important;
+  }
+
+  .entries-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── ANIMATIONS ──────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .archive__item {
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .archive__item:nth-child(2) { animation-delay: 0.1s; }
+  .archive__item:nth-child(3) { animation-delay: 0.2s; }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
