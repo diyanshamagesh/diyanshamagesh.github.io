@@ -24,13 +24,17 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  name             : "Diyansha Magesh"
+  pronouns         : "she/her/hers"  
+  bio              : "I'm a recent Psychology graduate from the University of California, Davis, where I spent the last several years developing a research foundation at the intersection of emotion science, neurodevelopmental conditions, and adolescent mental health.
+My core research experience is at the UC Davis MIND Institute's AIR Lab, where I support two active studies — Q-DATA and VRAM — investigating attention and distractibility in adolescents aged 8–18. My work spans facilitating VR research sessions, supporting clinical intake interviews, maintaining IRB-compliant data integrity, and collaborating across multidisciplinary teams.
+Beyond the lab, I've worked as a Clinical Psychology Intern at Roshini Trust in Hyderabad, India, assisting licensed clinicians with standardized assessments including the DST and VSMS, and observing behavioral interventions for children with neurodevelopmental disorders. I also conducted longitudinal behavioral observation of preschool-aged children at the Peregrine School in Davis.
+Outside of research, I mentor students with Autism Spectrum Disorder and other disabilities through UC Davis's Student Disability Center, and serve as a California Young Adult Ambassador for Soluna, promoting mental health awareness among college-aged communities.
+I'm proficient in REDCap and Qualtrics, hold CITI certifications in social/behavioral research and GCP, and am fluent in English, Hindi, Telugu, and Tamil. I'm passionate about building research that makes evidence-based mental health care more accessible — and working toward a Ph.D. in Clinical Psychology to pursue that long-term.""
+  location         : "United States of America"
+  employer         : "University of California, Davis"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "mageshdiyansha@gmail.com" 
 
   # Academic websites
   academia         : # URL
